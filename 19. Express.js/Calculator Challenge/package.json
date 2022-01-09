@@ -1,0 +1,15 @@
+{
+  "name": "calculator-challenge",
+  "version": "1.0.0",
+  "description": "Calculator Challenge from Dr. Angela Yu",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muhamad Bayu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2"
+  }
+}

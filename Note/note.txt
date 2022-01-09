@@ -1,0 +1,89 @@
+================================================== DOM ==============================================================
+document.getElementById("title")
+
+document.getElementsByClassName("list")[0]
+
+document.querySelector("h1")
+
+document.querySelector("#title")
+
+document.querySelector(".btn")
+
+document.querySelector("li a")
+
+document.querySelector("#list a")
+
+document.querySelectorAll("#list .item")[2]
+
+DOM style documentation -> untuk ngecek syntask css di javascript
+
+document.querySelector(".btn").classList.add("invisible")
+
+document.querySelector(".btn").classList.toggle("invisible")
+
+.innerHTML mengambil semua yang berada didalam suatu tag element pada html,
+  jika didalamnya terdapat tag lain, maka itu tetap terambil. .innerHTML dapat
+  digunakan untuk menambahkan tag dalam suatu tag element mis: tambah <em></em>
+  didalam tag <h1></h1>
+
+.textContent mengambil hanya tsxt dari tag yang dipilih. hanya TEXT
+
+document.querySelector("a").attributes mengecek attribut apa aja didalam tag ini
+
+document.querySelector("a").getAttribute("href") mengambil nilai attribut dari href
+
+
+================================================== DOM ==============================================================
+
+================================================== jQuery ==============================================================
+
+$("h1.title").css("color") -> get color value of the element
+
+$("h1.title").css("color","red") -> set element color to red
+
+$("h1.title").addClass("big-title margin-50") -> Adding 2 classes to the element
+
+$("h1.title").removeClass("big-title margin-50") -> removing 2 classes from the element
+
+$("h1").hasClass("margin-50") -> check is the element has margin-50 class, return boolean
+
+$("h1").text("Bye") -> mengubah text H1 menjadi Bye
+
+$("button").text("Dont click me") -> mengubah semua text dari button yang ada menjadi Dont click me
+
+$("a").attr("href","yahoo.com") -> mengubah attribut dari element a ke yahoo.com
+
+$("h1").click(function(){           -> menambahkan eventListener ke h1
+  $("h1").css("color","purple")
+
+$("button").click(function(){       -> menambahkan eventListener ke semua button
+  $("h1").css("color","purple")
+})
+
+$("h1").hide() -> hide H1
+
+$("h1").show() -> Show H1
+
+$("h1").append("<button>Yes</button>")
+
+$("h1").prepend("<button>Yes</button>")
+
+$("h1").before("<button>Yes</button>")
+
+$("h1").after("<button>Yes</button>")
+
+$("h1").toggle()
+$("h1").slideToggle()
+$("h1").fadeToggle()
+$("h1").slideUp().slideDown().animate({opacity:0.25})
+
+setTimeout(function () {
+  $("h1").animate({opacity:1})
+},10000)
+
+===========================================================javascript=================================================
+for (let i = 0; i < gamePattern.length; i++) {   -> karena setTimeout method merupakan method yang dapat berjalan paralel (concurrent),
+  setTimeout(() => {                               maka delay nya perlu dikali setiap item nya
+    animatePress(gamePattern[i])
+  },i*1000)
+}
