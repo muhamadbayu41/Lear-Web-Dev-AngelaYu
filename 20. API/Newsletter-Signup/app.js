@@ -1,9 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const ejs = require('ejs');
 
 const app = new express();
 app.use(bodyParser.urlencoded({extended:true}));
-
+app.set('view engine','ejs');
 app.use(express.static("public"));
 
 app.post("/NewsletterSignUp",function (req,res) {
@@ -30,7 +31,8 @@ app.post("/NewsletterSignUp",function (req,res) {
   const subscribingUser = {
     firstName: firstName,
     lastName: lastName,
-    email: email
+    email: email,
+    fullName: firstName+" "+lastName
   };
 
   async function run() {
@@ -43,10 +45,19 @@ app.post("/NewsletterSignUp",function (req,res) {
         }
      });
      console.log(`Successfully added contact as an audience member. The contact's id is ${response.id}.`);
-     res.sendFile(__dirname+"/success.html");
+     // res.sendFile(__dirname+"/success.html");
+     res.render('success',{user:subscribingUser.fullName});
     }
 
-  run().catch(e => res.sendFile(__dirname + "/failure.html"));
+  run().catch(e => {
+    console.log(e.status +" "+ e.response.body.detail);
+    if (e.response.body.detail.includes("already a list member")) {
+      res.render('failure',{user:subscribingUser.fullName});
+    }else {
+      res.render('failure_other',{user:subscribingUser.fullName});
+    }
+    }
+);
 
 });
 

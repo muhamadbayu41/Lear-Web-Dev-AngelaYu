@@ -1,0 +1,202 @@
+{
+ status: 401,
+ response: <ref *1> Response {
+   _events: [Object: null prototype] {},
+   _eventsCount: 0,
+   _maxListeners: undefined,
+   res: IncomingMessage {
+     _readableState: [ReadableState],
+     _events: [Object: null prototype],
+     _eventsCount: 3,
+     _maxListeners: undefined,
+     socket: [TLSSocket],
+     httpVersionMajor: 1,
+     httpVersionMinor: 1,
+     httpVersion: '1.1',
+     complete: true,
+     rawHeaders: [Array],
+     rawTrailers: [],
+     aborted: false,
+     upgrade: false,
+     url: '',
+     method: null,
+     statusCode: 401,
+     statusMessage: 'Unauthorized',
+     client: [TLSSocket],
+     _consuming: false,
+     _dumped: false,
+     req: [ClientRequest],
+     setEncoding: [Function (anonymous)],
+     on: [Function (anonymous)],
+     text: '{"type":"https://mailchimp.com/developer/marketing/docs/errors/","title":"API Key Invalid","status":401,"detail":"API key has been disabled","instance":"b1b9b143-a469-8fae-ade2-2c68e068a8de"}',
+     [Symbol(kCapture)]: false,
+     [Symbol(kHeaders)]: [Object],
+     [Symbol(kHeadersCount)]: 18,
+     [Symbol(kTrailers)]: null,
+     [Symbol(kTrailersCount)]: 0,
+     [Symbol(RequestTimeout)]: undefined
+   },
+   request: Request {
+     _events: [Object: null prototype] {},
+     _eventsCount: 0,
+     _maxListeners: undefined,
+     _agent: false,
+     _formData: null,
+     method: 'POST',
+     url: 'https://us20.api.mailchimp.com/3.0/lists/d7e61b89fd/members',
+     _header: [Object],
+     header: [Object],
+     writable: true,
+     _redirects: 0,
+     _maxRedirects: 5,
+     cookies: '',
+     qs: {},
+     _query: [],
+     qsRaw: [],
+     _redirectList: [],
+     _streamRequest: false,
+     _timeout: 120000,
+     _responseTimeout: 0,
+     _data: [Object],
+     req: [ClientRequest],
+     protocol: 'https:',
+     host: 'us20.api.mailchimp.com',
+     _endCalled: true,
+     _callback: [Function (anonymous)],
+     res: [IncomingMessage],
+     response: [Circular *1],
+     called: true,
+     [Symbol(kCapture)]: false
+   },
+   req: ClientRequest {
+     _events: [Object: null prototype],
+     _eventsCount: 3,
+     _maxListeners: undefined,
+     outputData: [],
+     outputSize: 0,
+     writable: true,
+     destroyed: false,
+     _last: true,
+     chunkedEncoding: false,
+     shouldKeepAlive: false,
+     maxRequestsOnConnectionReached: false,
+     _defaultKeepAlive: true,
+     useChunkedEncodingByDefault: true,
+     sendDate: false,
+     _removedConnection: false,
+     _removedContLen: false,
+     _removedTE: false,
+     _contentLength: 104,
+     _hasBody: true,
+     _trailer: '',
+     finished: true,
+     _headerSent: true,
+     _closed: false,
+     socket: [TLSSocket],
+     _header: 'POST /3.0/lists/d7e61b89fd/members HTTP/1.1\r\n' +
+       'Host: us20.api.mailchimp.com\r\n' +
+       'Accept-Encoding: gzip, deflate\r\n' +
+       'User-Agent: node-superagent/3.8.1\r\n' +
+       'Authorization: Basic dXNlcjowODI0OGE0Y2E3NTA4MTg1MTBiYmI3YmMxZGE3NTEwOQ==\r\n' +
+       'Content-Type: application/json\r\n' +
+       'Accept: application/json\r\n' +
+       'Content-Length: 104\r\n' +
+       'Connection: close\r\n' +
+       '\r\n',
+     _keepAliveTimeout: 0,
+     _onPendingData: [Function: nop],
+     agent: [Agent],
+     socketPath: undefined,
+     method: 'POST',
+     maxHeaderSize: undefined,
+     insecureHTTPParser: undefined,
+     path: '/3.0/lists/d7e61b89fd/members',
+     _ended: true,
+     res: [IncomingMessage],
+     aborted: false,
+     timeoutCb: null,
+     upgradeOrConnect: false,
+     parser: null,
+     maxHeadersCount: null,
+     reusedSocket: false,
+     host: 'us20.api.mailchimp.com',
+     protocol: 'https:',
+     [Symbol(kCapture)]: false,
+     [Symbol(kNeedDrain)]: false,
+     [Symbol(corked)]: 0,
+     [Symbol(kOutHeaders)]: [Object: null prototype]
+   },
+   text: '{"type":"https://mailchimp.com/developer/marketing/docs/errors/","title":"API Key Invalid","status":401,"detail":"API key has been disabled","instance":"b1b9b143-a469-8fae-ade2-2c68e068a8de"}',
+   body: {
+     type: 'https://mailchimp.com/developer/marketing/docs/errors/',
+     title: 'API Key Invalid',
+     status: 401,
+     detail: 'API key has been disabled',
+     instance: 'b1b9b143-a469-8fae-ade2-2c68e068a8de'
+   },
+   files: undefined,
+   buffered: true,
+   headers: {
+     server: 'openresty',
+     'content-type': 'application/problem+json; charset=utf-8',
+     'content-length': '172',
+     'x-request-id': 'b1b9b143-a469-8fae-ade2-2c68e068a8de',
+     link: '<https://us20.api.mailchimp.com/schema/3.0/Definitions/ProblemDetailDocument.json>; rel="describedBy"',
+     'content-encoding': 'gzip',
+     vary: 'Accept-Encoding',
+     date: 'Mon, 10 Jan 2022 04:43:28 GMT',
+     connection: 'close'
+   },
+   header: {
+     server: 'openresty',
+     'content-type': 'application/problem+json; charset=utf-8',
+     'content-length': '172',
+     'x-request-id': 'b1b9b143-a469-8fae-ade2-2c68e068a8de',
+     link: '<https://us20.api.mailchimp.com/schema/3.0/Definitions/ProblemDetailDocument.json>; rel="describedBy"',
+     'content-encoding': 'gzip',
+     vary: 'Accept-Encoding',
+     date: 'Mon, 10 Jan 2022 04:43:28 GMT',
+     connection: 'close'
+   },
+   statusCode: 401,
+   status: 401,
+   statusType: 4,
+   info: false,
+   ok: false,
+   redirect: false,
+   clientError: true,
+   serverError: false,
+   error: Error: cannot POST /3.0/lists/d7e61b89fd/members (401)
+       at Response.toError (C:\Users\omen1\OneDrive\Desktop\learn Web development - Dr. Angela Yu\Web Development\20. API\Newsletter-Signup\node_modules\superagent\lib\node\response.js:94:15)
+       at ResponseBase._setStatusProperties (C:\Users\omen1\OneDrive\Desktop\learn Web development - Dr. Angela Yu\Web Development\20. API\Newsletter-Signup\node_modules\superagent\lib\response-base.js:123:16)
+       at new Response (C:\Users\omen1\OneDrive\Desktop\learn Web development - Dr. Angela Yu\Web Development\20. API\Newsletter-Signup\node_modules\superagent\lib\node\response.js:41:8)
+       at Request._emitResponse (C:\Users\omen1\OneDrive\Desktop\learn Web development - Dr. Angela
+Yu\Web Development\20. API\Newsletter-Signup\node_modules\superagent\lib\node\index.js:739:20)
+       at C:\Users\omen1\OneDrive\Desktop\learn Web development - Dr. Angela Yu\Web Development\20.
+API\Newsletter-Signup\node_modules\superagent\lib\node\index.js:903:38
+       at Stream.<anonymous> (C:\Users\omen1\OneDrive\Desktop\learn Web development - Dr. Angela Yu\Web Development\20. API\Newsletter-Signup\node_modules\superagent\lib\node\parsers\json.js:19:7)
+       at Stream.emit (node:events:390:28)
+       at Unzip.<anonymous> (C:\Users\omen1\OneDrive\Desktop\learn Web development - Dr. Angela Yu\Web Development\20. API\Newsletter-Signup\node_modules\superagent\lib\node\unzip.js:55:12)
+       at Unzip.emit (node:events:390:28)
+       at endReadableNT (node:internal/streams/readable:1343:12) {
+     status: 401,
+     text: '{"type":"https://mailchimp.com/developer/marketing/docs/errors/","title":"API Key Invalid","status":401,"detail":"API key has been disabled","instance":"b1b9b143-a469-8fae-ade2-2c68e068a8de"}',
+     method: 'POST',
+     path: '/3.0/lists/d7e61b89fd/members'
+   },
+   accepted: false,
+   noContent: false,
+   badRequest: false,
+   unauthorized: true,
+   notAcceptable: false,
+   forbidden: false,
+   notFound: false,
+   type: 'application/problem+json',
+   charset: 'utf-8',
+   links: {
+     describedBy: 'https://us20.api.mailchimp.com/schema/3.0/Definitions/ProblemDetailDocument.json'    },
+   setEncoding: [Function: bound ],
+   redirects: [],
+   [Symbol(kCapture)]: false
+ }
+}
